@@ -1,6 +1,11 @@
-# Home page
+"""
+Due: Saturday, December 14, 2019 at 11:59pm
+
+@author: Patrick Mahan, Dylan Wirawan, Gabriel Singer, Aidan Mcerlean
+"""
+
+# Home Page
 homeHTML = """
-<!-- OMIS30 HTML Template-->
 <style>body{background-color: #ffb366;}</style>
 <p><br /><center><h1>Financial Calculator</h1></p>
 <p><center><h3>Created By: Patrick Mahan, Dylan Wirawan, Gabriel Singer, Aidan Mcerlean</h3></p>
@@ -8,12 +13,8 @@ homeHTML = """
 <p><button type="button" class="block" style="display: block; width: 100%; border: none; background-color: #4CAF50; padding: 14px 28px; font-size: 16px; cursor: pointer; text-align: center;"><a href="calc_home">Enter</button></a></p>
 """.strip()
 
+# Calculators Page
 calc_splashHTML = """
-<!-- OMIS30 HTML Template-->
-"""
-# Calculators page
-calc_splashHTML = """
-<!-- OMIS30 HTML Template-->
 <style>body{background-color: #ffb366;}</style>
 <p>&nbsp;</p>
 <p><center><h3>Choose what you would like to calculate below:</p>
@@ -27,7 +28,6 @@ calc_splashHTML = """
 
 # Present Value of a Bond
 pv_bondHTML = """
-<!-- OMIS30 HTML Template-->
 <style>body{background-color: #ffb366;}</style>
 <p><br /><center><h1>Present Value of a Bond</h1></p>
 <p>&nbsp;</p>
@@ -68,9 +68,8 @@ Number of Years:
 </form>
 """.strip()
 
-# for pv_bond_resultHTML, page crashes if I try to put in the code for backgrond color
+# Present Value of a Bond - Result Page
 pv_bond_resultHTML = """
-<!-- OMIS30 HTML Template-->
 <p>&nbsp;</p>
 <p><center>You entered:</p>
 <table>
@@ -124,7 +123,6 @@ pv_bond_resultHTML = """
 
 # Perpetuity
 perpHTML = """
-<!-- OMIS30 HTML Template-->
 <style>body{background-color: #ffb366;}</style>
 <p><br /><center><h1>Perpetuity</h1></p>
 <p>&nbsp;</p>
@@ -151,9 +149,8 @@ Coupon Pmt:
 </form>
 """.strip()
 
-# for perp_resultHTML, page crashes if I try to put in the code for backgrond color
+# Perpetuity - Result Page
 perp_resultHTML = """
-<!-- OMIS30 HTML Template-->
 <p>&nbsp;</p>
 <p><center>You entered:</p>
 <table>
@@ -185,7 +182,6 @@ perp_resultHTML = """
 
 # Monthly Mortgage Payments
 mortHTML = """
-<!-- OMIS30 HTML Template-->
 <style>body{background-color: #ffb366;}</style>
 <p><br /><center><h1>Monthly Mortgage Payments</h1></p>
 <p>&nbsp;</p>
@@ -217,9 +213,8 @@ Years:<br />
 </form>
 """.strip()
 
-# for mortresultHTML, page crashes if I try to put in the code for background color
+# Monthly Mortgage Payments - Results Page
 mort_resultHTML = """
-<!-- OMIS30 HTML Template-->
 <p>&nbsp;</p>
 <p><center>The user entered:</p>
 <table>
@@ -251,9 +246,12 @@ mort_resultHTML = """
 <img src="https://i.postimg.cc/65xHD96K/imageedit-2-6626502388.png" vertical-align="top" style="width:30px;height:40px;">&nbsp;&nbsp;&nbsp;<a href='/calc_home'>Do another calculation</a>
 """.strip()
 
+# Error Page
 errorMessageHTML = """
-<p>{error_field}</p>
 <p>&nbsp;</p>
+<p><center>{error_field}</p>
 <p>&nbsp;</p>
-<a href='/calc_home'>Try Again</a>
+<p><center><img src="https://i.postimg.cc/25Frpqms/broken-calc.jpg" style="width:200x;height:200px;"></p>
+<p>&nbsp;</p>
+<a href='/calc_home'><center>Try Again</a>
 """.strip()

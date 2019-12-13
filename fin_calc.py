@@ -1,3 +1,9 @@
+"""
+Due: Saturday, December 14, 2019 at 11:59pm
+
+@author: Patrick Mahan, Dylan Wirawan, Gabriel Singer, Aidan Mcerlean
+"""
+
 from flask import Flask,request
 
 from html_calc import calc_splashHTML, pv_bondHTML, pv_bond_resultHTML
@@ -12,18 +18,22 @@ import numpy as np
 
 app = Flask(__name__)
 
+# Home Page
 @app.route('/')
 def homepage():
     return homeHTML
 
+# Calculators Page
 @app.route('/calc_home')
 def calculator_landing_page():
     return calc_splashHTML
 
+# Present Value of a Bond
 @app.route('/pv_bond')
 def pv_bond():
     return pv_bondHTML
 
+# Present Value of a Bond - Result Page
 @app.route('/pv_bond_result')
 def pv_bond_result():
     try: 
@@ -42,10 +52,12 @@ def pv_bond_result():
     except:
         return errorMessageHTML.format(error_field = 'Something went wrong. Try entering the most logical integer values.')
 
+# Perpetuity
 @app.route('/perp')
 def perp():
     return perpHTML
 
+# Perpetuity - Result Page
 @app.route('/perp_result')
 def perp_result():
     try:
@@ -61,10 +73,12 @@ def perp_result():
     except:
         return errorMessageHTML.format(error_field = 'Something went wrong. Try entering the most logical integer values.')
 
+# Monthly Mortgage Payments
 @app.route('/mort')
 def mort():
     return mortHTML
 
+# Monthly Mortgage Payments - Results Page
 @app.route('/mort_result')
 def mort_result():
     try: 
@@ -88,6 +102,7 @@ def mort_result():
     except:
         return errorMessageHTML.format(error_field = 'Something went wrong. Try entering the most logical integer values.')
 
+# Error Page
 @app.route('/error')
 def error():
     return errorMessageHTML
